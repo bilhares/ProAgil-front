@@ -1,3 +1,4 @@
+<h1>Welcome {{title}}</h1>
 <div action="" class="form-inline">
   <div class="form-group mb-2">
     <input type="text" class="form-control mr-2" placeholder="Buscar" [(ngModel)]="filtroLista">
@@ -18,21 +19,21 @@
       <th>Local</th>
       <th>Data</th>
       <th>Qtd Pessoas</th>
-      <th>Lote</th>
+      <!-- <th>Lote</th> -->
       <th>Options</th>
     </tr>
   </thead>
   <tbody *ngIf="eventos && eventos.length">
-    <tr *ngFor="let evento of eventosFiltrados">
+    <tr *ngFor="let evento of eventos">
       <th>
-        <img *ngIf="mostrarImagem" src="{{evento.imagemURL}}" [style.width.px]="imagemLargura" [style.margin.px]="imagemMargem">
+        <img *ngIf="mostrarImagem" src="{{evento.imagemUrl}}" [style.width.px]="imagemLargura" [style.margin.px]="imagemMargem">
       </th>
       <th>{{evento.eventoID}}</th>
       <th>{{evento.tema}}</th>
       <th>{{evento.local}}</th>
       <th>{{evento.dataEvento}}</th>
       <th>{{evento.qtdPessoas}}</th>
-      <th>{{evento.lote| uppercase}} </th>
+      <!-- <th>{{evento.lote| uppercase}} </th> -->
       <th>
         <button class="btn btn-success"></button>
         <button class="btn btn-danger"></button>
